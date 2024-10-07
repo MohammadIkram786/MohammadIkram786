@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link href="Style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+<div class="main">
+    <div class="sub=main">
+    <div class="container">
+        <div class="fixed-cont">
+            <h1><img src="https://cdn-icons-png.flaticon.com/512/10748/10748404.png" height="50px" width="50px">ToDo App</h1>
+            <div class="wrapper">
+                <input type="text" id="input" placeholder="Enter Your Task....">
+                <button id="add">Add</button>
+            </div>
+            <hr>
+        </div>
+        <div class="list-items">
+            <div class="counter">
+                <div class="total">Total Task : 0</div>
+                <div class="completed">Completed Task : 0</div>
+                <button id="clrbtn" onclick="clearAll()">Delete All</button>
+            </div>
+            <ul class="ullist">
+            
+            </ul>
+        </div>
+    </div>
+    </div>
+</div> 
+
+<script src="Script.js"></script>
+</body>
+</html>
