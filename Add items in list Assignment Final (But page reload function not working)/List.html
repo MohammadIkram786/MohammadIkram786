@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="Style.css" rel="stylesheet">
+    <script src="new_script.js"></script>
+</head>
+<body>
+    <div>
+        <div id="main-form-container">
+
+            <div id="form-container">
+                <h2><i class="fa-solid fa-user-plus"></i></i>USER</h2>
+                <label for="name">Name:</label><br>
+                <input id="name" type="text" name="name"><br>
+                <label for="mobile">Mobile:</label><br>
+                <input id="mobile" type="text" name="mobile"><br>
+                <label for="address">Address:</label><br>
+                <textarea id="address" name="address" rows="3" cols="100"></textarea><br><br>
+                <button id="submit" onclick="submitInfo()">Submit</button>
+                <!--<button id="submit" onclick="add()">Add</button>-->
+            </div> 
+        </div>
+
+        <div id="list-container">
+            <div class="show-del-btn">
+                <button id="showAll" onclick="displayUser()">Display All Users</button>
+                <button id="clearAll" onclick="clearAll()">Delete All Users</button>
+            </div>
+            <table id="table">
+                <thead>
+                    <tr>    
+                        <th>S.N.</th>
+                        <th>NAME</th>
+                        <th>MOBILE</th>
+                        <th>ADDRESS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tb">
+                    <tr>
+                        <td>#</td>
+                        <td>Empty</td>
+                        <td>Empty</td>
+                        <td>Empty</td>
+                        <td>
+                                <button>
+                                <img src="https://cdn-icons-png.flaticon.com/256/8207/8207958.png" height="20px" width="20px">
+                                </button>
+                                <button>
+                                <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" height="20px" width="20px">
+                                </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </div>
+</body>
+</html>

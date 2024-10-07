@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    background-color: whitesmoke;
+}
+#main-form-container{
+    background-image: linear-gradient(pink, whitesmoke);
+    /*background-image: url("https://img.freepik.com/premium-vector/bouquet-flowers-with-word-spring-top-pink-gerberagerbera-flowers-background_1278344-596.jpg?w=900");*/
+    background-repeat: repeat;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+h2{ text-align:center; }
+#form-container{
+    background-color: rgba(255, 192, 203, 0.7);
+    padding: 20px;
+    width: 450px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 20px 20px 50px grey;
+}
+.fa-user-plus{
+    color: whitesmoke;
+}
+input{
+    width: 100%;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 8px 0px 8px 0px;
+}
+textarea{
+    max-width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 2px 0px 2px 0px;
+}
+#submit{
+    width: 40%;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    margin: auto;
+    display: block;
+}
+.show-del-btn{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+
+}
+#showAll, #clearAll{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    margin: auto;
+    background-color: pink;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px grey;
+}
+#table{
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+    color: black;
+    margin-bottom: 30px;
+    box-shadow: 20px 20px 50px grey;
+}
+thead{
+    background-color: pink;
+    color: black;
+}
+#table,tr,td,th{
+    border: 1px solid pink;
+    padding: 5px;
+    text-align: center;
+}
+button:hover {
+    cursor:pointer;
+}
