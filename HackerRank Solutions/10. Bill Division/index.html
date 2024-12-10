@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank</title>
+</head>
+
+<body>
+    <script>
+        let bill = [3,10,2,9]       //Total Bill
+        let k = 1;                  //Index value
+        let AnnaPay = 12;           //Anna Pay 12
+        let AnnaOverCharged = 0;    //Variable for Annas Actual Contribute Calculation
+        let total = 0;              //Variable for both Anna and Brians Total Contro (Excluding k)
+        let controAmmount = 0;      //Variable for Both Anna & Brians Contro Ammount    
+        bill.filter((v,i)=>{
+            if(i===k){
+                return
+            }
+            total += v; 
+        })
+
+        controAmmount = (total / 2);
+        AnnaOverCharged = AnnaPay - controAmmount;
+
+        if(AnnaPay>controAmmount){
+            console.log('Anna Overcharged by', AnnaOverCharged)
+        }
+        else{
+            console.log('Bon Appetit')
+        }        
+
+    </script>
+</body>
+
+</html>
