@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socks Match</title>
+</head>
+
+<body>
+    <button onclick="scoreCalculate(score)">Click Me!</button>
+    <script>
+        // let score = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+        // function scoreCalculate(score) {
+        //     let sum = 0;
+        //     let max = 0;
+        //     let min = 0;
+        //     score.map((v, i) => {
+        //         if(sum){
+        //             max = v;
+        //             min = v;
+        //         }
+        //     })
+        //     console.log(sum)
+        // }
+        // scoreCalculate(score);
+
+        function breakingRecords(scores) {
+            let minCount = 0;
+            let maxCount = 0;
+
+            // Initialize the first game's score as both the min and max record
+            let min = scores[0];
+            let max = scores[0];
+
+            // Loop through the remaining scores
+            for (let i = 1; i < scores.length; i++) {
+                if (scores[i] > max) {
+                    max = scores[i]; // New max score
+                    maxCount++; // Increment the max count
+                } else if (scores[i] < min) {
+                    min = scores[i]; // New min score
+                    minCount++; // Increment the min count
+                }
+            }
+
+            // Return the result as an array with [maxCount, minCount]
+            return [maxCount, minCount];
+        }
+
+        // Example usage:
+        const scores1 = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+        console.log(breakingRecords(scores1)); // Output: [2, 4]
+
+        const scores2 = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
+        console.log(breakingRecords(scores2)); // Output: [4, 0]
+
+    </script>
+</body>
+
+</html>

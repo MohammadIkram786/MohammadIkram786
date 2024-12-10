@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socks Match</title>
+</head>
+
+<body>
+    <button onclick="simpleArraySum(ar)">Click Me!</button>
+    <script>
+        let ar = [1 ,2, 3, 4, 5, 6]
+        function simpleArraySum(ar) {
+            let sum = 0;
+            ar.map((v, i) => {
+                sum += v;
+            })
+            console.log(sum)
+        }
+        simpleArraySum(ar);
+    </script>
+</body>
+
+</html>

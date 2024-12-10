@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank</title>
+</head>
+
+<body>
+    <script>
+        let str = 'aaabccddd'; //abd
+        let strLen = str.length;
+        let stack = [];
+        function stringShort(str) {
+            for (let i = 0; i < strLen; i++) {
+                if (stack.length > 0 && str[i] === stack[stack.length - 1]) {
+                    stack.pop();
+                }
+                else {
+                    stack.push(str[i]);
+                }
+            }
+            return stack.length === 0 ? 'Empty String' : stack.join('')
+        }
+        console.log(stringShort(str));
+    </script>
+</body>
+
+</html>
