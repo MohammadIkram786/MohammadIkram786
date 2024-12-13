@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank</title>
+</head>
+
+<body>
+    <script>
+        let a = [2, 4];
+        let b = [16, 32, 96];
+        let maxVal = Math.max(...a)
+        let minVal = Math.min(...b)
+        let counter = 0;
+
+        for(let i=maxVal; i<=minVal; i++){
+           let isMultipleOfA = a.every( v=> i%v===0 )
+
+           let isFactorOfB = b.every( v=> v%i===0 )
+
+           if(isMultipleOfA && isFactorOfB){
+            counter++;
+           }
+        }
+        console.log(counter)
+
+
+
+
+
+
+
+        // for(let i=maxVal; i<=minVal; i++){
+        //     for(let j=0; j<a.length; j++){
+        //         if(i%a[j]===0){
+        //             multipleCounter++
+        //         }
+        //         else{
+        //             continue
+        //         }
+        //     }
+        //     for(let k=0; k<b.length; k++){
+        //         if(b[k]%i===0){
+        //             factorCounter++
+        //         }
+        //         else{
+        //             continue
+        //         }
+        //     }
+        // }
+        // console.log(multipleCounter, factorCounter)
+    </script>
+</body>
+
+</html>
+
+
+<!-- Let's break this question down step by step in a simple way.
+
+What are we trying to do?
+We are given two arrays of integers, and our goal is to find how many integers exist that satisfy two conditions:
+
+The elements of the first array are all factors of the integer being considered.
+The integer being considered is a factor of all elements of the second array.
+Let's understand this with an example:
+Input:
+First array a: [2, 4]
+Second array b: [16, 32, 96]
+Step-by-step Explanation:
+Condition 1: The elements in a must be factors of the number we're considering.
+
+A factor means that the number in a should divide the number we're considering without leaving a remainder.
+Example: If we're considering the number 4, we check if 2 divides 4 (it does), and if 4 divides 4 (it does).
+Condition 2: The number we're considering must be a factor of every number in b.
+
+A factor means that the number we're considering should divide all the numbers in b without leaving a remainder.
+Example: If we're considering the number 4, we check if 4 divides all elements in b (16, 32, 96). It divides all of them, so it is a valid candidate.
+Solution Plan:
+Find the Range:
+
+The numbers we're considering will be between the max of the first array and the min of the second array.
+Why? Because:
+For a number to be a factor of all elements in a, it must be at least as large as the largest number in a.
+For a number to divide all elements in b, it must be less than or equal to the smallest number in b.
+Check Each Number:
+
+We need to check each number between max(a) and min(b) to see if it satisfies both conditions:
+It must be divisible by every element in a (Condition 1).
+It must divide every element in b (Condition 2).
+Count the Valid Numbers:
+
+If a number satisfies both conditions, we count it as a valid number.
+For the given input:
+First array a: [2, 4]
+Second array b: [16, 32, 96]
+We check the numbers between the max(a) = 4 and min(b) = 16:
+
+We check 4, 8, and 16 (these are the multiples of 4 that are between 4 and 16).
+For each of these numbers, we check:
+Condition 1: Is it divisible by all elements in a? (e.g., 4 is divisible by 2 and 4).
+Condition 2: Is it divisible by all elements in b? (e.g., 4 divides 16, 32, and 96).
+Answer:
+The numbers that satisfy both conditions are 4, 8, and 16.
+There are 3 such numbers. -->
+
+
+<!-- Program
+    function getTotalX(a, b) {
+    // Find the maximum number in array 'a' and the minimum number in array 'b'
+    const max_a = Math.max(...a);
+    const min_b = Math.min(...b);
+    
+    let validNumbers = 0;
+    
+    // Check all numbers from max(a) to min(b)
+    for (let x = max_a; x <= min_b; x++) {
+        // Check if x is a multiple of all elements in a (Condition 1)
+        let isMultipleOfA = a.every(ai => x % ai === 0);
+        
+        // Check if x is a divisor of all elements in b (Condition 2)
+        let isDivisorOfB = b.every(bi => bi % x === 0);
+        
+        // If x satisfies both conditions, it's a valid number
+        if (isMultipleOfA && isDivisorOfB) {
+            validNumbers++;
+        }
+    }
+    
+    return validNumbers;
+}
+
+// Sample Input
+let a = [2, 4];
+let b = [16, 32, 96];
+
+// Function Call
+let result = getTotalX(a, b);
+console.log(result);  // Output: 3 -->
