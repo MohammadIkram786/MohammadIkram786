@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank</title>
+</head>
+
+<body>
+    <script>
+       let arr = [4, 73, 67, 38, 33];
+       let newArr = [];
+       let minLimit = 38;
+
+       for(let i=0; i<arr.length; i++){
+        if(arr[i]<minLimit){
+            newArr.push(arr[i]);        //if marks less than 38
+        }      
+        else{
+            if(Math.ceil(arr[i]%5>=3)){
+                let reminder = arr[i]%5
+                newArr.push((arr[i]-reminder)+5)        //if reminder 3 or greater than 3
+            }
+            else{
+                newArr.push(arr[i])                     //if no change
+            }
+        }
+       }
+       console.log(newArr)
+    </script>
+</body>
+
+</html>
