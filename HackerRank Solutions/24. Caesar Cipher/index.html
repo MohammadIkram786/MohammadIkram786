@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank</title>
+</head>
+
+<body>
+    <script>
+        function caesarCipher(s, k) {
+            let encryptedString = '';
+
+            // Normalize the shift to be within 0-25
+            k = k % 26;
+
+            // Loop through each character in the string
+            for (let i = 0; i < s.length; i++) {
+                let char = s[i];
+
+                if (char >= 'a' && char <= 'z') {
+                    // Shift lowercase letters
+                    let newChar = String.fromCharCode(((char.charCodeAt(0) - 'a'.charCodeAt(0) + k) % 26) + 'a'.charCodeAt(0));
+                    encryptedString += newChar;
+                } else if (char >= 'A' && char <= 'Z') {
+                    // Shift uppercase letters
+                    let newChar = String.fromCharCode(((char.charCodeAt(0) - 'A'.charCodeAt(0) + k) % 26) + 'A'.charCodeAt(0));
+                    encryptedString += newChar;
+                } else {
+                    // Non-alphabetic characters remain the same
+                    encryptedString += char;
+                }
+            }
+
+            return encryptedString;
+        }
+
+        // Sample Input
+        let n = 11;
+        let s = "middle-Outz";
+        let k = 2;
+
+        // Encrypt the string using Caesar Cipher
+        let result = caesarCipher(s, k);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
