@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank</title>
+</head>
+
+<body>
+    <script>
+        function timeConversion(s) {
+            // Extract the period (AM/PM)
+            let period = s.slice(-2);
+
+            // Extract the hour, minute, and second
+            let hour = parseInt(s.slice(0, 2));   // parseInt convert 07 to 7
+            let minute = s.slice(3, 5);
+            let second = s.slice(6, 8);
+
+            // Convert the hour based on AM/PM
+            if (period === "AM") {
+                if (hour === 12) {
+                    hour = 0; // 12 AM is 00 in 24-hour time
+                }
+            } else if (period === "PM") {
+                if (hour !== 12) {
+                    hour += 12; // PM times except 12 PM should be converted to 24-hour format
+                }
+            }
+
+            // Format the hour to always be 2 digits
+            let formattedHour = hour < 10 ? "0" + hour : hour.toString();
+
+            // Return the time in 24-hour format
+            return formattedHour + ":" + minute + ":" + second;
+        }
+
+        // Sample Input
+        console.log(timeConversion("07:05:45PM")); // Output: "19:05:45"
+    </script>
+</body>
+
+</html>
