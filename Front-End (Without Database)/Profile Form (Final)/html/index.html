@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <script src="/JavaScript/script.js"></script>
+    <script src="/JavaScript/address.js"></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>User Profile</h2>
+        <form id="userProfile">
+            <fieldset class="fieldset">
+                <legend>Personal Information :</legend>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <div class="error" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">D.O.B.</label>
+                    <input type="date" id="dob" name="dob" placeholder="Enter your DOB">
+                    <div class="error" id="dobError"></div>
+                </div>
+
+                <div class="form-group-gender">
+                    <label for="gender" style="font-weight: bold;">Gender : </label>
+                    <input type="radio" id="genderMale" name="gender" value="Male">
+                    <label for="genderMale">Male</label>
+                    <input type="radio" id="genderFemale" name="gender" value="Female">
+                    <label for="genderFemale">Female</label>
+                    <input type="radio" id="genderOther" name="gender" value="Other">
+                    <label for="genderOther">Other</label>
+                    <div class="error" id="genderError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" disabled>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend>Contact Information :</legend>
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Varified" disabled>
+                    <div class="error" id="mobileError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="altmobile">Alternate Mobile</label>
+                    <input type="text" id="altmobile" name="altmobile" placeholder="Enter Alternate Mobile">
+                    <div class="error" id="altmobileError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Varified" disabled>
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="altemail">Alternate Email</label>
+                    <input type="text" id="altemail" name="altemail" placeholder="Enter Alternate Email">
+                    <div class="error" id="altemailError"></div>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend>Residential Information :</legend>
+
+                <div id="newManualAddress">
+                    <button type="button" class="btnAdd" onclick="manualAddress()">Add New Address</button>
+                    <div id="manual"></div>
+                </div>
+                <!-- <div id="newLocAddress">
+                    <button type="button" class="btnAdd" onclick="locationPickup()">Pickup Location</button>
+                    <div id="pickup"></div>
+                </div> -->
+                <div id="addressPrint">
+                    <div id="addressBlock"></div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn" onclick="saveProfile(event)">Save</button>
+            <button type="reset" class="btn">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>

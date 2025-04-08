@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(30, 143, 255, 0.39);
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  width: 75%;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 25%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn {
+  width: 10%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.form-group-gender {
+  margin-bottom: 25px;
+}
+
+.fieldset {
+  padding: 30px;
+  margin: 30px 0;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.pincodeBlock {
+  display: flex;
+}
+
+.form-group-add input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group-add textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group-add label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group-add input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.form-group-add textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.form-group-loc label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.addTypeBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.typeHead {
+  text-align: left;
+  flex: 1;
+  /* Ensures the typeHead occupies the left side */
+}
+
+.addFieldBlock {
+  text-align: right;
+  flex: 1;
+  /* Ensures the addFieldBlock occupies the right side */
+  justify-content: flex-end;
+  align-items: center;
+}
+#addField{
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.editDelBtn{
+  display: flex;
+  justify-content: flex-end
+}
+.subBtn {
+  display: flex; /* Makes buttons inline-flex */
+  gap: 10px; /* Adds spacing between the buttons */
+  justify-content: flex-end; /* Align buttons to the right within the container */
+}
+.subBtn button{
+  width: 100px;
+}
+.typeHead h3{
+  font-style: italic;
+}
+.btnAdd {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgba(128, 128, 128, 0.171);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+.btnAdd:hover {
+  background-color: rgba(128, 128, 128, 0.568);
+}
+#newManualAddress{
+  margin-bottom: 10px;
+}
+.myAddresses{
+  background-color: rgba(245, 245, 245, 0.719);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
