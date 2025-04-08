@@ -1,0 +1,161 @@
+<?php
+// Database connection details
+$servername = "localhost"; // or your database server
+$username = "root";        // your database username
+$password = "";            // your database password
+$dbname = "user_info";   // your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get form data
+$usrname = $_POST['username'] ?? '';
+$passwrd = $_POST['password'] ?? '';
+
+// Check if both fields are provided
+if ($usrname && $passwrd) {
+    // Prepare SQL query to fetch user data based on username and password
+    $sql = "SELECT * FROM registration WHERE username = ? AND password = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $usrname, $passwrd); // "ss" means two strings
+
+    // Execute the query
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if user was found
+    if ($result->num_rows > 0) {
+        // Fetch the user data
+        $user = $result->fetch_assoc();
+
+        // Display the user data
+        // echo "<h2>User Information</h2>";
+        // echo "<p><strong>Username:</strong> " . htmlspecialchars($user['username']) . "</p>";
+        // echo "<p><strong>Email:</strong> " . htmlspecialchars($user['email']) . "</p>";
+        // echo "<p><strong>Mobile:</strong> " . htmlspecialchars($user['mobile']) . "</p>";
+    } else {
+        echo "<p>No user found with the provided name and email.</p>";
+    }
+
+    // Close the statement
+    $stmt->close();
+} else {
+    echo "<p>Please provide both name and email.</p>";
+}
+
+// Close the connection
+$conn->close();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/address.js"></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>User Profile 2</h2>
+        <form id="userProfile" method="post" action="saved_profile.php">
+            <fieldset class="fieldset">
+                <legend>Personal Information :</legend>
+                <!-- Hidden field for user_id (should be populated dynamically on the server side) -->
+                <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user['id']); ?>">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <div class="error" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">D.O.B.</label>
+                    <input type="date" id="dob" name="dob" placeholder="Enter your DOB">
+                    <div class="error" id="dobError"></div>
+                </div>
+
+                <div class="form-group-gender">
+                    <label for="gender" style="font-weight: bold;">Gender : </label>
+                    <input type="radio" id="genderMale" name="gender" value="Male">
+                    <label for="genderMale">Male</label>
+                    <input type="radio" id="genderFemale" name="gender" value="Female">
+                    <label for="genderFemale">Female</label>
+                    <input type="radio" id="genderOther" name="gender" value="Other">
+                    <label for="genderOther">Other</label>
+                    <div class="error" id="genderError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user['username'])?>" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($user['password'])?>" disabled>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend>Contact Information :</legend>
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Varified" value="<?php echo htmlspecialchars($user['mobile'])?>" disabled>
+                    <div class="error" id="mobileError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="altmobile">Alternate Mobile</label>
+                    <input type="text" id="altmobile" name="altmobile" placeholder="Enter Alternate Mobile">
+                    <div class="error" id="altmobileError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Varified" value="<?php echo htmlspecialchars($user['email'])?>" disabled>
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="altemail">Alternate Email</label>
+                    <input type="text" id="altemail" name="altemail" placeholder="Enter Alternate Email">
+                    <div class="error" id="altemailError"></div>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend>Residential Information :</legend>
+
+                <div id="newManualAddress">
+                    <button type="button" class="btnAdd" onclick="manualAddress()">Add New Address</button>
+                    <div id="manual"></div>
+                </div>
+                <!-- <div id="newLocAddress">
+                    <button type="button" class="btnAdd" onclick="locationPickup()">Pickup Location</button>
+                    <div id="pickup"></div>
+                </div> -->
+                <div id="addressPrint">
+                    <div id="addressBlock"></div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn" onclick="saveProfile(event)">Save</button>
+            <button type="reset" class="btn">Reset</button>
+            <button type="reset" class="btn"><a id="logbtn" href="../logout.php">Logout</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+           /* Extra large devices (large laptops and desktops, 1200px and up) */
+           @media only screen and (max-width: 1200px) {
+               * {
+                   box-sizing: border-box;
+               }
+
+               .form-container {
+                   width: 90% !important;
+                   padding: 10px 15px;
+               }
+
+               .fieldset {
+                   width: 100%;
+                   padding: 20px;
+                   border-radius: 10px;
+                   margin: 15px 0;
+               }
+
+               .fieldset legend {
+                   font-size: 14px;
+               }
+
+               .form-group label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group-gender label {
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group-add label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group-loc label {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group input {
+                   width: 40%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add input {
+                   width: 70%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc input {
+                   width: 70%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add textarea {
+                   width: 40%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc textarea {
+                   width: 40%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .btn {
+                   width: 10%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .subBtn button {
+                   width: 80px;
+                   padding: 8px;
+                   font-size: 14px;
+               }
+
+               .typeHead h3 {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 15px;
+                   width: 100%;
+               }
+
+               #newManualAddress button {
+                   width: 50%;
+                   padding: 8px;
+                   font-size: 15px;
+               }
+
+               #newLocAddress button {
+                   width: 50%;
+                   font-size: 15px;
+                   padding: 8px;
+               }
+
+               .form-group-loc #location {
+                   width: 5%;
+                   padding: 0;
+                   margin: 0;
+               }
+
+               select {
+                   padding: 5px !important;
+                   font-size: 14px !important;
+                   width: 40%;
+               }
+           }
+
+           /* Large devices (laptops/desktops, 992px and up) */
+           @media only screen and (max-width: 992px) {
+               * {
+                   box-sizing: border-box;
+               }
+
+               .form-container {
+                   width: 90% !important;
+                   padding: 10px 15px;
+               }
+
+               .fieldset {
+                   width: 100%;
+                   padding: 20px;
+                   border-radius: 10px;
+                   margin: 15px 0;
+               }
+
+               .fieldset legend {
+                   font-size: 14px;
+               }
+
+               .form-group label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group-gender label {
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group-add label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group-loc label {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 14px;
+               }
+
+               .form-group input {
+                   width: 50%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add input {
+                   width: 70%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc input {
+                   width: 70%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add textarea {
+                   width: 40%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc textarea {
+                   width: 40%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .btn {
+                   width: 10%;
+                   padding: 8px;
+                   font-size: 14px;
+                   margin-bottom: 5px;
+               }
+
+               .subBtn button {
+                   width: 80px;
+                   padding: 8px;
+                   font-size: 14px;
+               }
+
+               .typeHead h3 {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 15px;
+                   width: 100%;
+               }
+
+               #newManualAddress button {
+                   width: 50%;
+                   padding: 8px;
+                   font-size: 15px;
+               }
+
+               #newLocAddress button {
+                   width: 50%;
+                   font-size: 15px;
+                   padding: 8px;
+               }
+
+               .form-group-loc #location {
+                   width: 5%;
+                   padding: 0;
+                   margin: 0;
+               }
+
+               select {
+                   padding: 5px !important;
+                   font-size: 14px !important;
+                   width: 40%;
+               }
+               .addFieldBlock label {
+                font-size: 15px;
+               }
+           }
+
+           /* Medium devices (landscape tablets, 768px and up) */
+           @media only screen and (max-width: 768px) {
+               * {
+                   box-sizing: border-box;
+               }
+
+               h2 {
+                   margin-bottom: 5px !important;
+               }
+
+               .form-container {
+                   width: 90% !important;
+                   padding: 10px 15px;
+               }
+
+               .fieldset {
+                   width: 100%;
+                   padding: 10px;
+                   border-radius: 10px;
+                   margin: 15px 0;
+               }
+
+               .fieldset legend {
+                   font-size: 12px;
+               }
+
+               .form-group label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 12px;
+               }
+
+               .form-group-gender label {
+                   margin-bottom: 5px;
+                   font-size: 12px;
+               }
+
+               .form-group-add label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 12px;
+               }
+
+               .form-group-loc label {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 12px;
+               }
+
+               .form-group input {
+                   width: 60%;
+                   padding: 5px;
+                   font-size: 12px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add input {
+                   width: 60%;
+                   padding: 5px;
+                   font-size: 12px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc input {
+                   width: 60%;
+                   padding: 5px;
+                   font-size: 12px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add textarea {
+                   width: 50%;
+                   padding: 5px;
+                   font-size: 12px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc textarea {
+                   width: 50%;
+                   padding: 5px;
+                   font-size: 12px;
+                   margin-bottom: 5px;
+               }
+
+               .btn {
+                   width: 20%;
+                   padding: 5px;
+                   font-size: 12px;
+                   margin-bottom: 5px;
+               }
+
+               .subBtn button {
+                   width: 60px;
+                   padding: 5px;
+                   font-size: 12px;
+               }
+
+               .typeHead h3 {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 13px;
+                   width: 100%;
+               }
+
+               #newManualAddress button {
+                   width: 70%;
+                   padding: 5px;
+                   font-size: 14px;
+               }
+
+               #newLocAddress button {
+                   width: 70%;
+                   font-size: 14px;
+                   padding: 5px;
+               }
+
+               .form-group-loc #location {
+                   width: 5%;
+                   padding: 0;
+                   margin: 0;
+               }
+
+               select {
+                   padding: 2px !important;
+                   font-size: 12px !important;
+                   width: 40%;
+               }
+               .addFieldBlock label {
+                display: block;
+                font-size: 14px;
+               }
+           }
+
+           /* Extra small devices (phones, 600px and down) */
+           @media only screen and (max-width: 600px) {
+               * {
+                   box-sizing: border-box;
+               }
+
+               h2 {
+                   font-size: 14px;
+                   margin-bottom: 5px !important;
+               }
+
+               .form-container {
+                   width: 95%;
+                   padding: 10px 15px;
+               }
+
+               .fieldset {
+                   width: 100%;
+                   padding: 10px;
+                   border-radius: 10px;
+                   margin: 15px 0;
+               }
+
+               .fieldset legend {
+                   font-size: 10px;
+               }
+
+               .form-group label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 10px;
+               }
+
+               .form-group-gender label {
+                   margin-bottom: 5px;
+                   font-size: 10px;
+               }
+
+               .form-group-add label {
+                   display: block;
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 10px;
+               }
+
+               .form-group-loc label {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 10px;
+               }
+
+               .form-group input {
+                   width: 90%;
+                   padding: 5px;
+                   font-size: 10px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add input {
+                   width: 90%;
+                   padding: 5px;
+                   font-size: 10px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc input {
+                   width: 90%;
+                   padding: 5px;
+                   font-size: 10px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-add textarea {
+                   width: 100%;
+                   padding: 5px;
+                   font-size: 10px;
+                   margin-bottom: 5px;
+               }
+
+               .form-group-loc textarea {
+                   width: 100%;
+                   padding: 5px;
+                   font-size: 10px;
+                   margin-bottom: 5px;
+               }
+
+               .btn {
+                   width: 40%;
+                   padding: 5px;
+                   font-size: 10px;
+                   margin-bottom: 5px;
+               }
+
+               .subBtn button {
+                   width: 60px;
+                   padding: 5px;
+                   font-size: 10px;
+               }
+
+               .typeHead h3 {
+                   font-weight: bold;
+                   margin-bottom: 5px;
+                   font-size: 12px;
+                   width: 100%;
+               }
+
+               #newManualAddress button {
+                   width: 90%;
+                   padding: 5px;
+                   font-size: 12px;
+               }
+
+               #newLocAddress button {
+                   width: 90%;
+                   font-size: 12px;
+                   padding: 5px;
+               }
+
+               .form-group-loc #location {
+                   width: 5%;
+                   padding: 0;
+                   margin: 0;
+               }
+
+               select {
+                   padding: 2px !important;
+                   font-size: 10px !important;
+                   width: 60%;
+               }
+               .addFieldBlock label {
+                display: block;
+                font-size: 12px;
+               }
+           }
